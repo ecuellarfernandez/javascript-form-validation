@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>La Casita del libro</title>
+  </head>
+  <body>
+    <!-- Image and text -->
+    <header class="mb-5 pb-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">La Casita del libro</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item m-auto">
+                  <a class="nav-link" href="#bookSearchSection">Sección 1</a>
+                </li>
+                <li class="nav-item m-auto">
+                    <a class="nav-link" href="#bookSection">Sección 2</a>
+                  </li>
+                  <a href="form.html" class="ml-lg-4 m-auto"><i class="text-secondary" data-feather="user"></i></a>
+              </ul>
+              
+             
+            </div>
+            </div>
+          </nav>
+
+    </header>
+
+    <!-- Form -->
+
+    <div class="container" id="forms-container">
+
+        <div class="forms row">
+
+                <form id="forms__form__sign-in" class="forms__form col-md-6" onsubmit="return validateLogin()">
+                    <h4>Sign In</h4>
+                    <div class="form-group">
+
+                        <label for="sign-in__email-input">Email address</label>
+
+                        <input type="text" class="form-control" id="sign-in__email-input">
+
+                        <div id="is-invalid-message__email-login" class="invalid-feedback"></div>
+
+                        </div>
+
+                      <div class="form-group">
+
+                        <label for="sign-in__password-input">Password</label>
+
+                        <input type="password" class="form-control" id="sign-in__password-input">
+
+                        <div id="is-invalid-message__password-login" class="invalid-feedback"></div>
+                      </div>
+
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="sign-in__remember-check">
+
+                        <label class="form-check-label" for="sign-in__remember-check">Remember me</label>
+
+                        <div id="is-invalid-message__remember-check" class="invalid-feedback"></div>
+                      </div>
+
+                      <button ty
+                      
+                      pe="submit" class="btn btn-success">Log in</button>
+                </form>
+            <!-- register form -->
+                <form id="forms__form__register" class="forms__form col-md-6" onsubmit="return validateRegister()">
+                    <h4>Register</h4>
+                    <div class="form-group">
+                      <label for="register__email-input">Email address</label>
+                      <input type="text" class="form-control" id="register__email-input">
+                      <div id="is-invalid-message__email" class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="register__password-input">Password</label>
+                            <input type="password" class="form-control" id="register__password-input">
+
+                            <div id="is-invalid-message__password" class="invalid-feedback"></div>
+                          </div>
+
+                          <div class="form-group col-md-6">
+                            <label for="register__repeatPassword-input">Repeat password</label>
+                            <input type="password" class="form-control" id="register__repeatPassword-input">
+
+                            <div id="is-invalid-message__repeatPassword" class="invalid-feedback"></div>
+                          </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="register__address-input">Address</label>
+                        <input type="text" class="form-control" id="register__address-input">
+                        <div id="is-invalid-message__address" class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="form-group">
+                    <label for="register__region-input">Region</label>
+                    <select class="form-control" id="register__region-input">
+                        <option selected></option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+                    <div id="is-invalid-message__region" class="invalid-feedback"></div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="register__city-input">City</label>
+                            <input type="text" class="form-control" id="register__city-input">
+                            <div id="is-invalid-message__city" class="invalid-feedback"></div>
+                        </div>
+    
+                        <div class="form-group col-md-6">
+                            <label for="register__zip-input">Zip code</label>
+                            <input type="text" class="form-control" id="register__zip-input" inputmode="numeric">
+                            <div id="is-invalid-message__zip" class="invalid-feedback"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-group form-check">
+                        
+                      <input type="checkbox" class="form-check-input" id="register__agree-checkbox">
+
+                      <label class="form-check-label" for="register__agree-checkbox">I agree the privacy policies</label>
+
+                      <div id="is-invalid-message__policies" class="invalid-feedback"></div>
+                    </div>
+
+                    <button id="register__register-button" type="submit" class="btn btn-success">Register</button>
+                </form>
+
+        </div>
+        <a class="btn btn-primary mt-5" href="form-jquery.html">Jquery form validation <i style="width: 15px;" data-feather="arrow-right"></i> </a>
+    </div>
+
+
+    <!-- app js -->
+    <script src="js/validation.js"></script>
+    <!-- icons -->
+    <script>
+    feather.replace();
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+html{scroll-behavior: smooth;}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+}
+
+#bookSearchSection{
+    margin-top: 60px;
+    height: 50vh;
+}
+
+#bookWrapper{
+    overflow-x: hidden;
+}
+
+#sidebarBook{
+    margin-left: -15rem;
+    transition: margin 0.5s;
+    border-right: 2px solid #f2f2f2;
+}
+    #sidebarBook.toggled{
+        margin-left: 0;
+    }
+        #sidebarBook__content{
+            min-width: 15rem;
+            max-width: 15rem;
+        }
+
+#bookSection{
+    min-width: 95vw;
+}  
+    #bookSection .row .book{
+        display: flex;
+        align-items: center;
+        transition: all 0.8s;
+        border: 0 solid transparent;
+    }
+    #bookSection .row .book:hover{
+        transform: translateY(-5px);
+        background-color: rgba(0, 0, 0, 0.02);
+        cursor: pointer;
+    }
+
+/* FORM */
+
+
+
+    @media (min-width: 992px) {
+
+        #bookSection .row .book > div:nth-child(1){
+            width: 40%;
+        }
+        #bookSection .row .book > div:nth-child(2){
+            width: 60%;
+        }
+    }
+   
